@@ -7,23 +7,32 @@ int resto = numero % 2;
 
 if (numero <= 1)
 {
-    System.Console.WriteLine($"{numero} não é primo");
+     System.Console.WriteLine($"{numero} não é primo");
+     return;
+
 }
 else if (numero == 2)
 {
      System.Console.WriteLine($"{numero} é primo");
+     return;
+
 }
-else if(resto == 0)
+else if (resto == 0)
 {
      System.Console.WriteLine($"{numero} não é primo");
+     return;
+
 }
 
 for (int i = 3; i * i <= numero; i += 2)
 {
-    if (numero % i == 0)
-    {
-         System.Console.WriteLine($"{numero} não é primo");
-    }
+     if (numero % i == 0)
+     {
+          System.Console.WriteLine($"{numero} não é primo");
+          return;
+     }
+
 }
-   
+System.Console.WriteLine($"{numero} é primo");
+
 
